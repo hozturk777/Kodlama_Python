@@ -54,22 +54,20 @@ def DeleteMultiple():
     dltValue = int(input()) 
     i = 0
     while i < dltValue:
-        print(f"{i + 1}. Öğrenciyi Silmek İçin Numarasını Giriniz")
-        dlt = int(input())
-        j = True
-        while j == True:
-            if dlt < len(student):
-                std = str(student[dlt])            
-                if dlt == student.index(std):
-                    student.pop(dlt)
-                    break
-            else:
-                print("Öyle Bir Öğrenci Yok")
+        print(f"{i + 1}. Öğrenciyi Silmek İçin İsmini Giriniz")
+         
+        deleted = input()
+        j = 0
+        while j < len(student):         
+            if deleted == student[j]:
+                student.pop(j)
                 break
-        j = True
+            elif deleted != student[j]:
+                print("Öyle Bir Öğrenci Yok")
+            j += 1        
         i += 1
 
-
+    
     print("\n")
 
     
